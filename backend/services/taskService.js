@@ -12,16 +12,15 @@ const addTask =(title, priority) => {
  tasks.push(newTask);
  return newTask;   
 };
-
-
 const deleteTask =(id) => {
    const intialLength=tasks.length;
    tasks=tasks.filter(t => t.id !== id);
    return tasks.length < intialLength;
 };
-module.exports={
-   getAllTasks,
-   getTaskById,
-   addTask,
-   deleteTask
+const updateTask =(id, updatedData) => {
+   const task = tasks.find((t) => t.id === id);
+   if (!task) return null;
+   Object.assign(tasks,updatedData);
+   return task;
 };
+module.exports={ getAllTasks, getTaskById,addTask,deleteTask,updateTask};

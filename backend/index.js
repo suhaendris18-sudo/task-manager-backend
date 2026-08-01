@@ -4,8 +4,6 @@ const app = express();
 
 const { PORT, APP_NAME } = require('./config/env');
 const taskRoutes = require('./routes/taskRoutes');
-
-
 app.use(cors());
 app.use(express.json());
 
