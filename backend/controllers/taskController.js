@@ -26,11 +26,15 @@ const remove = (req, res) => {
   res.json({ message: 'Task deleted successfully' });
 };
 
-const updatetask =(req,res) =>{
+const updatetask = (req, res) => {
   const id = parseInt(req.params.id);
-  const updateData =req.body;
-  const update=taskService.updateTask(id, updateData);
-  if(!update) {return res.status(404).json({message: 'Task not Found'});}
-  res.json({message:"task updated sucessfully"})
-}
+  const updatedData = req.body;
+
+  const updatedTask = taskService.updateTask(id, updatedData);
+
+  if (!updatedTask) {
+    return res.status(404).json({ message: "Task not found" });
+  }
+  res.json(updatedTask);
+};
 module.exports = { getAll,getOne,create,remove,updatetask};
