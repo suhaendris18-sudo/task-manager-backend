@@ -106,3 +106,42 @@ li:hover {
   background: #e56b6f;
   color: white;
 }
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.task-info p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.task-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.complete-btn {
+  background: rgba(255, 255, 255, 0.85);
+  color: #4a7c59;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.complete-btn:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+.task-buttons button {
+  min-width: 80px;
+  text-align: center;
+}
