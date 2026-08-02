@@ -11,7 +11,6 @@ app.use('/api/tasks', taskRoutes);
 app.get('/', (req, res) => {
   res.send(`${APP_NAME} is running...`);
 });
-
 app.listen(PORT, () => {
   console.log(`${APP_NAME} is running at http://localhost:${PORT}`);
 });
