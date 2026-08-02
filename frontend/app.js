@@ -1,4 +1,4 @@
-const API_URL = "https://task-manager-backend-71vt.onrender.com";
+const API_URL = "https://task-manager-backend-71vt.onrender.com/api/tasks";
 const taskForm = document.getElementById('task-form');
 const titleInput = document.getElementById('title');
 const priorityInput = document.getElementById('priority');
